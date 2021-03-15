@@ -1,0 +1,554 @@
+Microsoft Windows [Version 10.0.19042.630]
+(c) 2020 Microsoft Corporation. All rights reserved.
+
+C:\Users\Sergey>F:
+
+F:\>ls \Sergey\Study\Git\learnGit
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+F:\>cd \Sergey\Study\Git\learnGit
+
+F:\Sergey\Study\Git\learnGit>git actions
+git: 'actions' is not a git command. See 'git --help'.
+
+F:\Sergey\Study\Git\learnGit>git action
+git: 'action' is not a git command. See 'git --help'.
+
+F:\Sergey\Study\Git\learnGit>git help
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone             Clone a repository into a new directory
+   init              Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add               Add file contents to the index
+   mv                Move or rename a file, a directory, or a symlink
+   restore           Restore working tree files
+   rm                Remove files from the working tree and from the index
+   sparse-checkout   Initialize and modify the sparse-checkout
+
+examine the history and state (see also: git help revisions)
+   bisect            Use binary search to find the commit that introduced a bug
+   diff              Show changes between commits, commit and working tree, etc
+   grep              Print lines matching a pattern
+   log               Show commit logs
+   show              Show various types of objects
+   status            Show the working tree status
+
+grow, mark and tweak your common history
+   branch            List, create, or delete branches
+   commit            Record changes to the repository
+   merge             Join two or more development histories together
+   rebase            Reapply commits on top of another base tip
+   reset             Reset current HEAD to the specified state
+   switch            Switch branches
+   tag               Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a local branch
+   push              Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+
+F:\Sergey\Study\Git\learnGit>git --help
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone             Clone a repository into a new directory
+   init              Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add               Add file contents to the index
+   mv                Move or rename a file, a directory, or a symlink
+   restore           Restore working tree files
+   rm                Remove files from the working tree and from the index
+   sparse-checkout   Initialize and modify the sparse-checkout
+
+examine the history and state (see also: git help revisions)
+   bisect            Use binary search to find the commit that introduced a bug
+   diff              Show changes between commits, commit and working tree, etc
+   grep              Print lines matching a pattern
+   log               Show commit logs
+   show              Show various types of objects
+   status            Show the working tree status
+
+grow, mark and tweak your common history
+   branch            List, create, or delete branches
+   commit            Record changes to the repository
+   merge             Join two or more development histories together
+   rebase            Reapply commits on top of another base tip
+   reset             Reset current HEAD to the specified state
+   switch            Switch branches
+   tag               Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a local branch
+   push              Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+
+F:\Sergey\Study\Git\learnGit>echo 123 > 123.txt
+
+F:\Sergey\Study\Git\learnGit>git add .
+
+F:\Sergey\Study\Git\learnGit>git log
+commit 634148d06089fb7b4735082d2957157faed0ec0f (HEAD -> master, origin/master)
+Author: Зимацкий Сергей <vdamah.serg@gmail.com>
+Date:   Sat Mar 6 19:04:36 2021 +0300
+
+    First commit
+
+F:\Sergey\Study\Git\learnGit>git commit "second commit"
+error: pathspec 'second commit' did not match any file(s) known to git
+
+F:\Sergey\Study\Git\learnGit>git commit
+[master 40906ee] second commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 123.txt
+
+F:\Sergey\Study\Git\learnGit>git log
+commit 40906eef47cd1abb50e3f44b8e964182c99332ac (HEAD -> master)
+Author: Sergey <52708090+Celeron404@users.noreply.github.com>
+Date:   Mon Mar 15 21:29:40 2021 +0300
+
+    second commit
+
+commit 634148d06089fb7b4735082d2957157faed0ec0f (origin/master)
+Author: Зимацкий Сергей <vdamah.serg@gmail.com>
+Date:   Sat Mar 6 19:04:36 2021 +0300
+
+    First commit
+
+F:\Sergey\Study\Git\learnGit>git branch feature
+
+F:\Sergey\Study\Git\learnGit>git log
+commit 40906eef47cd1abb50e3f44b8e964182c99332ac (HEAD -> master, feature)
+Author: Sergey <52708090+Celeron404@users.noreply.github.com>
+Date:   Mon Mar 15 21:29:40 2021 +0300
+
+    second commit
+
+commit 634148d06089fb7b4735082d2957157faed0ec0f (origin/master)
+Author: Зимацкий Сергей <vdamah.serg@gmail.com>
+Date:   Sat Mar 6 19:04:36 2021 +0300
+
+    First commit
+
+F:\Sergey\Study\Git\learnGit>234 > 234.txt
+'234' is not recognized as an internal or external command,
+operable program or batch file.
+
+F:\Sergey\Study\Git\learnGit>echo 234 > 234.txt
+
+F:\Sergey\Study\Git\learnGit>git add .
+
+F:\Sergey\Study\Git\learnGit>git action
+git: 'action' is not a git command. See 'git --help'.
+
+F:\Sergey\Study\Git\learnGit>git actions
+git: 'actions' is not a git command. See 'git --help'.
+
+F:\Sergey\Study\Git\learnGit>git commit -m "third commit"
+[master 281bdb2] third commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 234.txt
+
+F:\Sergey\Study\Git\learnGit>git log
+commit 281bdb246b1cf30c66f14b6bd29b6c9daf2629f7 (HEAD -> master)
+Author: Sergey <52708090+Celeron404@users.noreply.github.com>
+Date:   Mon Mar 15 21:33:14 2021 +0300
+
+    third commit
+
+commit 40906eef47cd1abb50e3f44b8e964182c99332ac (feature)
+Author: Sergey <52708090+Celeron404@users.noreply.github.com>
+Date:   Mon Mar 15 21:29:40 2021 +0300
+
+    second commit
+
+commit 634148d06089fb7b4735082d2957157faed0ec0f (origin/master)
+Author: Зимацкий Сергей <vdamah.serg@gmail.com>
+Date:   Sat Mar 6 19:04:36 2021 +0300
+
+    First commit
+
+F:\Sergey\Study\Git\learnGit>git checkout feature
+Switched to branch 'feature'
+
+F:\Sergey\Study\Git\learnGit>345 > 345.txt
+'345' is not recognized as an internal or external command,
+operable program or batch file.
+
+F:\Sergey\Study\Git\learnGit>echo 345 > 345.txt
+
+F:\Sergey\Study\Git\learnGit>
+F:\Sergey\Study\Git\learnGit>git log --oneline --graph --all
+* 281bdb2 (master) third commit
+* 40906ee (HEAD -> feature) second commit
+* 634148d (origin/master) First commit
+
+F:\Sergey\Study\Git\learnGit>git commit -a -m "fourth commit"
+On branch feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        345.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+F:\Sergey\Study\Git\learnGit>git add .
+
+F:\Sergey\Study\Git\learnGit>git commit -a -m "fourth commit"
+[feature 0d409cc] fourth commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 345.txt
+
+F:\Sergey\Study\Git\learnGit>git log --oneline --graph --all
+* 0d409cc (HEAD -> feature) fourth commit
+| * 281bdb2 (master) third commit
+|/
+* 40906ee second commit
+* 634148d (origin/master) First commit
+
+F:\Sergey\Study\Git\learnGit>git checkout "second commit"
+error: pathspec 'second commit' did not match any file(s) known to git
+
+F:\Sergey\Study\Git\learnGit>git checkout 40906ee
+Note: switching to '40906ee'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 40906ee second commit
+
+F:\Sergey\Study\Git\learnGit>echo 456 > 456.txt
+
+F:\Sergey\Study\Git\learnGit>git add .
+
+F:\Sergey\Study\Git\learnGit>git commit -m "fifth commit"
+[detached HEAD c08c37d] fifth commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 456.txt
+
+F:\Sergey\Study\Git\learnGit>git log
+commit c08c37d4de7d4f732bc4f6b9daaa0573db5d212e (HEAD)
+Author: Sergey <52708090+Celeron404@users.noreply.github.com>
+Date:   Mon Mar 15 21:36:56 2021 +0300
+
+    fifth commit
+
+commit 40906eef47cd1abb50e3f44b8e964182c99332ac
+Author: Sergey <52708090+Celeron404@users.noreply.github.com>
+Date:   Mon Mar 15 21:29:40 2021 +0300
+
+    second commit
+
+commit 634148d06089fb7b4735082d2957157faed0ec0f (origin/master)
+Author: Зимацкий Сергей <vdamah.serg@gmail.com>
+Date:   Sat Mar 6 19:04:36 2021 +0300
+
+    First commit
+
+F:\Sergey\Study\Git\learnGit>git log --oneline --graph --all
+* c08c37d (HEAD) fifth commit
+| * 0d409cc (feature) fourth commit
+|/
+| * 281bdb2 (master) third commit
+|/
+* 40906ee second commit
+* 634148d (origin/master) First commit
+
+F:\Sergey\Study\Git\learnGit>git branch feature2
+
+F:\Sergey\Study\Git\learnGit>git log --oneline --graph --all
+* c08c37d (HEAD, feature2) fifth commit
+| * 0d409cc (feature) fourth commit
+|/
+| * 281bdb2 (master) third commit
+|/
+* 40906ee second commit
+* 634148d (origin/master) First commit
+
+F:\Sergey\Study\Git\learnGit>git checkout feature2
+Switched to branch 'feature2'
+
+F:\Sergey\Study\Git\learnGit>git log --oneline --graph --all
+* c08c37d (HEAD -> feature2) fifth commit
+| * 0d409cc (feature) fourth commit
+|/
+| * 281bdb2 (master) third commit
+|/
+* 40906ee second commit
+* 634148d (origin/master) First commit
+
+F:\Sergey\Study\Git\learnGit>git checkout feture
+error: pathspec 'feture' did not match any file(s) known to git
+
+F:\Sergey\Study\Git\learnGit>git checkout feature
+Switched to branch 'feature'
+
+F:\Sergey\Study\Git\learnGit>git log --oneline --graph --all
+* c08c37d (feature2) fifth commit
+| * 0d409cc (HEAD -> feature) fourth commit
+|/
+| * 281bdb2 (master) third commit
+|/
+* 40906ee second commit
+* 634148d (origin/master) First commit
+
+F:\Sergey\Study\Git\learnGit>git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+F:\Sergey\Study\Git\learnGit>git log --oneline --graph --all
+* c08c37d (feature2) fifth commit
+| * 0d409cc (feature) fourth commit
+|/
+| * 281bdb2 (HEAD -> master) third commit
+|/
+* 40906ee second commit
+* 634148d (origin/master) First commit
+
+F:\Sergey\Study\Git\learnGit>git merge feature
+Merge made by the 'recursive' strategy.
+ 345.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 345.txt
+
+F:\Sergey\Study\Git\learnGit>git log --oneline --graph --all
+*   72c080b (HEAD -> master) Merge branch 'feature'
+|\
+| * 0d409cc (feature) fourth commit
+* | 281bdb2 third commit
+|/
+| * c08c37d (feature2) fifth commit
+|/
+* 40906ee second commit
+* 634148d (origin/master) First commit
+
+F:\Sergey\Study\Git\learnGit>git rebase feature2
+Successfully rebased and updated refs/heads/master.
+
+F:\Sergey\Study\Git\learnGit>git log --oneline --graph --all
+* 54accfe (HEAD -> master) fourth commit
+* 06d8c41 third commit
+* c08c37d (feature2) fifth commit
+| * 0d409cc (feature) fourth commit
+|/
+* 40906ee second commit
+* 634148d (origin/master) First commit
+
+F:\Sergey\Study\Git\learnGit>echo 567 > 567.txt
+
+F:\Sergey\Study\Git\learnGit>git add .
+
+F:\Sergey\Study\Git\learnGit>git commit -m "sixth commit"
+[master 6420ba9] sixth commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 567.txt
+
+F:\Sergey\Study\Git\learnGit>git log --oneline --graph --all
+* 6420ba9 (HEAD -> master) sixth commit
+* 54accfe fourth commit
+* 06d8c41 third commit
+* c08c37d (feature2) fifth commit
+| * 0d409cc (feature) fourth commit
+|/
+* 40906ee second commit
+* 634148d (origin/master) First commit
+
+F:\Sergey\Study\Git\learnGit>checkoup 6420ba9
+'checkoup' is not recognized as an internal or external command,
+operable program or batch file.
+
+F:\Sergey\Study\Git\learnGit>checkout 6420ba9
+'checkout' is not recognized as an internal or external command,
+operable program or batch file.
+
+F:\Sergey\Study\Git\learnGit>git checkout 6420ba9
+Note: switching to '6420ba9'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 6420ba9 sixth commit
+
+F:\Sergey\Study\Git\learnGit>git log --oneline --graph --all
+* 6420ba9 (HEAD, master) sixth commit
+* 54accfe fourth commit
+* 06d8c41 third commit
+* c08c37d (feature2) fifth commit
+| * 0d409cc (feature) fourth commit
+|/
+* 40906ee second commit
+* 634148d (origin/master) First commit
+
+F:\Sergey\Study\Git\learnGit>echo 789 > 789.txt
+
+F:\Sergey\Study\Git\learnGit>git add .
+
+F:\Sergey\Study\Git\learnGit>git commit -m "seventh commit"
+[detached HEAD 0f9b2bd] seventh commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 789.txt
+
+F:\Sergey\Study\Git\learnGit>git log --oneline --graph --all
+* 0f9b2bd (HEAD) seventh commit
+* 6420ba9 (master) sixth commit
+* 54accfe fourth commit
+* 06d8c41 third commit
+* c08c37d (feature2) fifth commit
+| * 0d409cc (feature) fourth commit
+|/
+* 40906ee second commit
+* 634148d (origin/master) First commit
+
+F:\Sergey\Study\Git\learnGit>git branch feature3
+
+F:\Sergey\Study\Git\learnGit>git log --oneline --graph --all
+* 0f9b2bd (HEAD, feature3) seventh commit
+* 6420ba9 (master) sixth commit
+* 54accfe fourth commit
+* 06d8c41 third commit
+* c08c37d (feature2) fifth commit
+| * 0d409cc (feature) fourth commit
+|/
+* 40906ee second commit
+* 634148d (origin/master) First commit
+
+F:\Sergey\Study\Git\learnGit>echo 890 > 890.txt
+
+F:\Sergey\Study\Git\learnGit>git add .
+
+F:\Sergey\Study\Git\learnGit>git commit "eighth commit"
+error: pathspec 'eighth commit' did not match any file(s) known to git
+
+F:\Sergey\Study\Git\learnGit>git commit -m "eighth commit"
+[detached HEAD b1a9a39] eighth commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 890.txt
+
+F:\Sergey\Study\Git\learnGit>git log --oneline --graph --all
+* b1a9a39 (HEAD) eighth commit
+* 0f9b2bd (feature3) seventh commit
+* 6420ba9 (master) sixth commit
+* 54accfe fourth commit
+* 06d8c41 third commit
+* c08c37d (feature2) fifth commit
+| * 0d409cc (feature) fourth commit
+|/
+* 40906ee second commit
+* 634148d (origin/master) First commit
+
+F:\Sergey\Study\Git\learnGit>git branch feature4
+
+F:\Sergey\Study\Git\learnGit>git log --oneline --graph --all
+* b1a9a39 (HEAD, feature4) eighth commit
+* 0f9b2bd (feature3) seventh commit
+* 6420ba9 (master) sixth commit
+* 54accfe fourth commit
+* 06d8c41 third commit
+* c08c37d (feature2) fifth commit
+| * 0d409cc (feature) fourth commit
+|/
+* 40906ee second commit
+* 634148d (origin/master) First commit
+
+F:\Sergey\Study\Git\learnGit>git checkout master
+Previous HEAD position was b1a9a39 eighth commit
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 5 commits.
+  (use "git push" to publish your local commits)
+
+F:\Sergey\Study\Git\learnGit>git rebase feature3
+Successfully rebased and updated refs/heads/master.
+
+F:\Sergey\Study\Git\learnGit>git log --oneline --graph --all
+* b1a9a39 (feature4) eighth commit
+* 0f9b2bd (HEAD -> master, feature3) seventh commit
+* 6420ba9 sixth commit
+* 54accfe fourth commit
+* 06d8c41 third commit
+* c08c37d (feature2) fifth commit
+| * 0d409cc (feature) fourth commit
+|/
+* 40906ee second commit
+* 634148d (origin/master) First commit
+
+F:\Sergey\Study\Git\learnGit>git merge feature4
+Updating 0f9b2bd..b1a9a39
+Fast-forward
+ 890.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 890.txt
+
+F:\Sergey\Study\Git\learnGit>git log --oneline --graph --all
+* b1a9a39 (HEAD -> master, feature4) eighth commit
+* 0f9b2bd (feature3) seventh commit
+* 6420ba9 sixth commit
+* 54accfe fourth commit
+* 06d8c41 third commit
+* c08c37d (feature2) fifth commit
+| * 0d409cc (feature) fourth commit
+|/
+* 40906ee second commit
+* 634148d (origin/master) First commit
+
+F:\Sergey\Study\Git\learnGit>git push
+Enumerating objects: 22, done.
+Counting objects: 100% (22/22), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (21/21), 1.66 KiB | 568.00 KiB/s, done.
+Total 21 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), done.
+To https://github.com/Celeron404/learnGit
+   634148d..b1a9a39  master -> master
+
+F:\Sergey\Study\Git\learnGit>
